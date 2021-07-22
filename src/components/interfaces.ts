@@ -52,9 +52,9 @@ export interface IConfModal {
 export interface IInputContainer {
   change: React.ChangeEventHandler<HTMLInputElement>;
   add: () => void;
-  name: string;
-  time: string;
-  desc: string;
+  taskName: string;
+  taskTime: string;
+  taskDesc: string;
   validation: {
     [k: string]: boolean;
     taskName: boolean;

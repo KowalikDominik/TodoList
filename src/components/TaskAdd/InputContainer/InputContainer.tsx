@@ -3,11 +3,11 @@ import React from "react";
 import { IInputContainer } from "../../interfaces";
 
 export const InputContainer: React.FC<IInputContainer> = ({
-  name,
-  time,
+  taskName,
+  taskTime,
   change,
   add,
-  desc,
+  taskDesc,
   validation,
   showInvalid,
 }) => {
@@ -22,34 +22,40 @@ export const InputContainer: React.FC<IInputContainer> = ({
         <div className="singleInputContainer">
           <input
             type="text"
-            id="name"
-            name="name"
+            id="taskName"
+            name="taskName"
             onChange={change}
-            value={name}
+            value={taskName}
           />
-          <label htmlFor="name" className={name.length !== 0 ? "notEmpty" : ""}>
-            Name {checkValid("name")}
+          <label
+            htmlFor="taskName"
+            className={taskName.length !== 0 ? "notEmpty" : ""}
+          >
+            Name {checkValid("taskName")}
           </label>
         </div>
         <div className="singleInputContainer">
           <input
             type="text"
-            id="desc"
-            name="desc"
+            id="taskDesc"
+            name="taskDesc"
             onChange={change}
-            value={desc}
+            value={taskDesc}
           />
-          <label htmlFor="desc" className={desc.length !== 0 ? "notEmpty" : ""}>
+          <label
+            htmlFor="taskDesc"
+            className={taskDesc.length !== 0 ? "notEmpty" : ""}
+          >
             Description
           </label>
         </div>
         <div className="singleInputContainer">
           <input
             type="datetime-local"
-            id="date"
-            name="date"
+            id="taskTime"
+            name="taskTime"
             onChange={change}
-            value={time}
+            value={taskTime}
           />
           <label htmlFor="date" className="notEmpty">
             Date
