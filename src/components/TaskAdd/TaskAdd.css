@@ -1,0 +1,62 @@
+.addBtn {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 20px;
+  right: calc(50% - 440px);
+  cursor: pointer;
+  background-color: #2dc66d;
+  border-radius: 50%;
+}
+
+.addBtn:after,
+.addBtn:before {
+  content: " ";
+  top: calc(50% - 15px);
+  left: calc(50% - 2px);
+  position: absolute;
+  height: 30px;
+  width: 4px;
+  background: #fff;
+}
+.addBtn::after {
+  transform: rotate(-90deg);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+.inputContainer button {
+  width: 30%;
+}
+
+.singleInputContainer {
+  margin-bottom: 40px;
+  position: relative;
+}
+.singleInputContainer input {
+  width: 100%;
+  height: 56px;
+  padding-top: 30px;
+}
+.singleInputContainer label {
+  position: absolute;
+  left: 10px;
+  top: 17px;
+  font-weight: bold;
+  cursor: text;
+  transition: transform 0.2s;
+  width: 100%;
+  height: 100%;
+}
+.singleInputContainer input:focus + label,
+.singleInputContainer .notEmpty {
+  transform: translate(-12%, -17px) scale(0.75);
+}
+
+@media (max-width: 900px) {
+  .addBtn {
+    right: 10px;
+  }
+}
