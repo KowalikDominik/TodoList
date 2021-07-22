@@ -18,7 +18,6 @@ const putData = (data: ITask) => {
 };
 
 const getData = async () => {
-  console.log("oryginal ");
   return new Promise((resolve, reject) => {
     collection
       .get()

@@ -25,11 +25,9 @@ export const TaskAdd: React.FC<Props> = ({ addTask, loading }) => {
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
     const inputName = e.target.name;
-    console.log(inputValue);
     if (inputName === "taskDesc") setTaskDesc(inputValue);
     if (inputName === "taskTime") setTaskTime(inputValue);
     if (inputName === "taskName") {
-      console.log(inputValue);
       setTaskName(inputValue);
       // validation if name is empty
       if (inputValue.length > 0) setValid({ taskName: true });
