@@ -10,7 +10,6 @@ const App: React.FC = () => {
       <Header />
       <div className="container">
         <TodoList />
-        Testing Issue
       </div>
     </div>
   );
