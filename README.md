@@ -36,8 +36,5 @@ $ npm start
 ## Run testing
 
 ```
-$ npm install
-```
-```
-Press `a` 
+$ npm testAll
 ```
